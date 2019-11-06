@@ -1,0 +1,245 @@
+// ============================================================================
+// BOOTSTRAP IMPORT - Must come first so we can override it
+// ============================================================================
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+// ============================================================================
+// CONFIGURATION - Customize these values for your mission trip
+// ============================================================================
+
+// FONT CONFIGURATION
+// To use a different font:
+// 1. Go to https://fonts.google.com/
+// 2. Select your font and weights (recommended: 200, 400, 700, 900)
+// 3. Copy the @import URL and replace the one below
+// 4. Update the $font-family variable to match your chosen font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
+
+$font-family: 'Inter', sans-serif;
+
+// COLOR CONFIGURATION
+// Update these colors to match your mission trip theme or country flag colors
+$primary-color: #FF9933;      // Main accent color (orange by default)
+$secondary-color: #138808;    // Secondary accent color (green by default)
+$base-color: #42444D;         // Dark gray for headers and backgrounds
+
+// ============================================================================
+// CSS Custom Properties - Auto-generated from SASS variables above
+// ============================================================================
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --base-color: #{$base-color};
+  --alert-color: #800000;
+
+  // Derived colors (calculated from primary/secondary)
+  --primary-light: #FFD1A3;
+  --primary-lighter: #FFE8D1;
+  --secondary-light: #A3E8A3;
+  --base-light: #F5F5F5;
+  --base-dark: #1A1B20;
+}
+
+// ============================================================================
+// Base Styles
+// ============================================================================
+body {
+  font-family: $font-family;
+  font-size: 22px;
+  margin-bottom: 250px;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13vw;
+  line-height: 13.5vw;
+  border-bottom: var(--primary-color) 2px solid;
+  margin-bottom: 40px;
+  color: var(--primary-light);
+}
+
+.txt-iorange {
+  color: var(--primary-color);
+}
+
+.txt-iorange2 {
+  color: var(--primary-lighter);
+}
+
+.txt-igreen {
+  color: var(--secondary-light);
+}
+
+.fill-name {
+  color: var(--primary-light);
+}
+
+.subtitle {
+  font-size: inherit;
+}
+
+.link-blue {
+  color: #7A7C85;
+}
+
+.icon-pray {
+  color: #80a280;
+}
+
+.box-title {
+  background-color: var(--base-color);
+  color: #fff;
+  padding: 5rem 3rem 15rem 3rem;
+}
+
+.box-finances {
+  border-top: var(--secondary-color) 3px solid;
+}
+
+.box-finalthanks {
+  border-top: var(--primary-color) 3px solid;
+}
+
+.box-personal {
+  border-top: var(--primary-color) 3px solid;
+}
+
+.box-what {
+  background-color: var(--base-light);
+}
+
+.box-whyindia {
+  background-color: var(--base-color);
+  color: #fff;
+}
+
+.what-card-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 150px;
+  font-weight: 900;
+  color: #E8E8E8;
+  z-index: 0;
+}
+
+.what-card-text {
+  color: #2A2B31;
+  z-index: 30;
+  padding: 20px;
+}
+
+.what-card {
+  min-height: 300px;
+}
+
+.help-title {
+  border-top: var(--primary-color) 3px solid;
+  border-bottom: var(--primary-color) 3px solid;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 0;
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+.box-warning {
+  background-color: #D97A1A;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#securityCollapse {
+  background-color: #FFF5E8;
+  border: #D97A1A 2px solid;
+}
+
+@media (min-width: 769px) {
+  .title {
+    font-size: 100px;
+    line-height: 103.8px;
+  }
+}
+
+// ============================================================================
+// Arrow Line Style - For travel dates divider
+// ============================================================================
+.arrow-line {
+  position: relative;
+  height: 4px;
+
+  // The line itself - shortened to stop at arrowhead bases
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 4px solid var(--primary-color);
+
+  // Left arrow
+  &::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 12px 8px 0;
+    border-color: transparent var(--primary-color) transparent transparent;
+    transform: translateY(-6px);
+  }
+
+  // Right arrow
+  &::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent var(--primary-color);
+    transform: translateY(-6px);
+  }
+}
+
+// ============================================================================
+// Chartist Pie Chart Styles - Statistics Section
+// ============================================================================
+.ct-chart {
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+
+  // Add drop shadow to the chart
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.ct-series-a .ct-slice-donut {
+    stroke: var(--secondary-color) !important;
+}
+
+// Second series (Non-Christian percentage) - use base color
+.ct-series-b .ct-slice-donut {
+    stroke: var(--base-light) !important;
+  opacity: 0.4;
+}
+
+// Label styling
+.ct-label {
+  fill: #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

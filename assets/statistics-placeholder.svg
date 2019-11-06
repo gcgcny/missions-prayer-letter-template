@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <circle cx="150" cy="150" r="100" fill="#138808" opacity="0.3"/>
+  <path d="M 150 150 L 150 50 A 100 100 0 0 1 249.9 200 Z" fill="#FF9933" opacity="0.5"/>
+  <text x="150" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#42444D">Statistics</text>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Customize data</text>
+</svg>
