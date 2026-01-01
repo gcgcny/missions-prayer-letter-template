@@ -50,10 +50,7 @@ See [CUSTOMIZATION-GUIDE.md](CUSTOMIZATION-GUIDE.md) for detailed instructions o
 
 This template includes automated deployment to GitHub Pages via GitHub Actions.
 
-1. **Enable GitHub Pages** in your repository settings:
-   - Go to Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `gh-pages` / root
+1. **Enable GitHub Pages** in your repository settings
 
 2. **Push to main branch** - The GitHub Action will automatically:
    - Install dependencies
